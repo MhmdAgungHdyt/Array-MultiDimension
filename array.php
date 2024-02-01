@@ -1,7 +1,7 @@
 <?php
 
-$huruf = [["A" , "B" , "C" , "D" , "E" , "F" , "G" , "H" , "J", "I" , "K" , "L" , "M"],
-         ["N" , "O" , "P" , "Q" , "R" , "S" , "T" , "U" , "V" , "W" , "X" , "Y" , "Z"]];
+$huruf = ["A" , "B" , "C" , "D" , "E" , "F" , "G" , "H" , "J", "I" , "K" , "L" , "M",
+         "N" , "O" , "P" , "Q" , "R" , "S" , "T" , "U" , "V" , "W" , "X" , "Y" , "Z"];
 
 $MataP = [["Pendidikan Agama dan Bukti Pekerti", "Pendidikan Pancasila", "Bahasa Indonesia", "Matematika"], 
         ["Bahasa Inggris", "Dasar-dasar Kejuruan RPL"]];
@@ -29,7 +29,7 @@ $MataP = [["Pendidikan Agama dan Bukti Pekerti", "Pendidikan Pancasila", "Bahasa
             height : 200px;
             width : 300px;
             background : orange;
-            border-radius : 0px 20px 0px 20px;
+            border-radius : 20px 0px 20px 0px;
             color : white;
             float : left;
             text-align : center;
@@ -42,12 +42,10 @@ $MataP = [["Pendidikan Agama dan Bukti Pekerti", "Pendidikan Pancasila", "Bahasa
     </style>
 </head>
 <body>
-      <?php foreach( $huruf as $apasaja ) : ?>
-      <?php foreach( $apasaja as $a ) : ?>
-        <div class="bulat"><?= $a; ?></div>
-        <?php endforeach; ?>
+      <?php for( $NilaiA = 0; $NilaiA < count($huruf); $NilaiA++ ) : ?>
+        <div class="bulat"><?= $huruf[$NilaiA]; ?></div>
+        <?php endfor; ?>
         <div class="clear"></div>
-        <?php endforeach; ?>
 
         <h1><?php echo "Mata Pelajaran - X RPL 1" ?></h1>
       <?php foreach( $MataP as $MataNajwa ) : ?>
